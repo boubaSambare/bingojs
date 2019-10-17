@@ -1,7 +1,7 @@
 //bingo board
 
 function createBoard(){
-    for (var i = 0; i <= 76; i++ ){
+    for (var i = 0; i <= 74; i++ ){
         var bingoContainer = document.querySelector('#bingo-container')
 
         var bingoCellContainer = document.createElement('div')
@@ -9,7 +9,7 @@ function createBoard(){
 
         var bingoCell = document.createElement('h3')
         bingoCellContainer.className = 'cell'
-        bingoCell.innerText = randomNumber()
+        bingoCell.innerText = i + 1
         
         bingoCellContainer.appendChild(bingoCell)
         bingoContainer.appendChild(bingoCellContainer)
@@ -19,6 +19,13 @@ function createBoard(){
 
 function randomNumber(){
     var randomNumbers = Math.floor(Math.random() * 75)
+    var randomNumberElm = document.querySelector('#random-number')
+    randomNumberElm.innerText = randomNumbers
     console.log(randomNumbers)
     return randomNumbers
+}
+
+window.onload = function () {
+
+    createBoard()
 }

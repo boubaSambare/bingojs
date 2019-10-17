@@ -1,0 +1,11 @@
+#bingo-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 700px;
+    height: 200px;
+    margin: auto;
+}
+
+.cell  {
+    border: 1px solid black;
+}
