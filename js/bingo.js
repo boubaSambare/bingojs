@@ -8,7 +8,7 @@ function createBoard(){
         bingoCellContainer.className = 'bingo-cell'
 
         var bingoCell = document.createElement('h3')
-        bingoCellContainer.className = 'cell'
+        bingoCellContainer.className = 'cell ' + 'cell-' + (i +1)
         bingoCell.innerText = i + 1
         
         bingoCellContainer.appendChild(bingoCell)
@@ -22,6 +22,7 @@ function randomNumber(){
     var randomNumberElm = document.querySelector('#random-number')
     randomNumberElm.innerText = randomNumbers
     console.log(randomNumbers)
+    
     return randomNumbers
 }
 
